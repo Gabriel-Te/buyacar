@@ -1,6 +1,8 @@
+
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image } from 'react-native';
 import logo from '../assets/BuyAcar.png'
+
 
 function Nav() {
   return (
