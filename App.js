@@ -59,6 +59,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#a6a6a6',
   },
   flatlist: {
-    flex: 1
+    flex: 1,
+    display: 'flex',
   }
 });

@@ -14,7 +14,6 @@ function Card({image,name,price}) {
 const styles = StyleSheet.create({
     container: {
       display: 'flex',
-      width: '100%',
       height: 500
     },
     logo: {
