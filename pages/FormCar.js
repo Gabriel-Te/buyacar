@@ -5,12 +5,13 @@ function FormCar() {
 
   const [name, setName] = useState('')
   const [price, setPrice] = useState()
+  const [image, setImage] = useState('')
   
   
   return (
     <View style={styles.container}>
-      <Text>{name}</Text>
-      <Text>{price}</Text>
+
+      <Text>Vehicle Name</Text>
       <TextInput
       style={styles.input}
       onChangeText={e => setName(e)}
@@ -18,6 +19,7 @@ function FormCar() {
       placeholder='Vehicle Name'
       />
 
+      <Text>Price</Text>
       <TextInput
       style={styles.input}
       onChangeText={e => setPrice(e)}
@@ -25,12 +27,19 @@ function FormCar() {
       placeholder='Price'
       keyboardType='numeric'
       />
+
+      <Text>Image(online URL)</Text>
+      <TextInput
+      style={styles.input}
+      onChangeText={e => setImage(e)}
+      value={image}
+      placeholder='Set a Image'
+      />
       </View>
   );
 }
 const styles = StyleSheet.create({
     container: {
-        marginTop: 100,
         backgroundColor: '#616161',
         flex: 1
     },
