@@ -1,5 +1,6 @@
 import { StyleSheet, Text, View, Image, TextInput } from 'react-native';
 import {useState} from 'react'
+import Button from '../components/Button';
 
 function FormCar() {
 
@@ -35,13 +36,17 @@ function FormCar() {
       value={image}
       placeholder='Set a Image'
       />
+
+      <Button/>
       </View>
   );
 }
 const styles = StyleSheet.create({
     container: {
+        display: 'flex',
         backgroundColor: '#616161',
-        flex: 1
+        flex: 1,
+
     },
     input: {
       backgroundColor: '#fff',
