@@ -1,12 +1,13 @@
-import { createDrawerNavigator } from '@react-navigation/drawer'
+import { DrawerContent, createDrawerNavigator } from '@react-navigation/drawer'
 import { NavigationContainer } from '@react-navigation/native';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, FlatList, SafeAreaView } from 'react-native';
-import Nav from './layout/Nav';
 import Home from './pages/Home'
 import FormCar from './pages/FormCar';
+import DrawerrContent from './components/DrawerContent';
 
 const Drawer = createDrawerNavigator()
+
 
 export default function App() {
 
@@ -14,8 +15,8 @@ export default function App() {
 
     <SafeAreaView style={styles.maincontainer}>
     <StatusBar style="auto" />
-      <NavigationContainer drawerStyle={styles.navigation}>
-        <Drawer.Navigator>
+      <NavigationContainer>
+        <Drawer.Navigator drawerContent={props => <DrawerrContent {...props}/>}>
           <Drawer.Screen name='Home' component={Home} />
           <Drawer.Screen name='FormCar' component={FormCar} />
         </Drawer.Navigator>
@@ -29,9 +30,6 @@ const styles = StyleSheet.create({
     flex: 1,
     textAlign: 'center',
     justifyContent: 'center',
-    backgroundColor: '#cbf6ff',
+
   },
-  navigation: {
-    backgroundColor: 'black'
-  }
 });
