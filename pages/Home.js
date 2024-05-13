@@ -8,25 +8,25 @@ function Home() {
           id : 1,
           name: 'Lotus Carlton',
           price: 140000,
-          image: require('../assets/lotusCarlton.jpg')
+          image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Porsche_964_front_20080515.jpg/1200px-Porsche_964_front_20080515.jpg'
         },
         {
           id : 2,
           name: 'Lotuas Carlton',
           price: 140000,
-          image: require('../assets/lotusCarlton.jpg')
+          image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxH8JzdrjS_NLhjkZHNZRrbKdgaIZLRzsH-g&usqp=CAU'
         },
         {
           id : 3,
           name: 'Lotus Carlton',
           price: 140000,
-          image: require('../assets/lotusCarlton.jpg')
+          image: 'https://carroscomcamanzi.com.br/wp-content/uploads/2022/02/JAGUAR-XJ-C-3.jpg'
         },
         {
           id : 4,
           name: 'Lotus Carlton',
           price: 140000,
-          image: require('../assets/lotusCarlton.jpg')
+          image: 'https://www.carscoops.com/wp-content/uploads/2020/08/Mercedes-Benz-190E-2.5-16-Evolution-7b.jpg'
         },
       ]
 
@@ -49,11 +49,10 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
         flex: 1,
         flexDirection: 'row',
-        paddingTop: 50,
         height: 100,
-        justifyContent: 'space-between',
-        alignItems: "center",
-        paddingHorizontal : 10
+        justifyContent: 'center',
+        width: '100%',
+        maxWidth: '100%'
     },
     logo: {
         width: 50,
