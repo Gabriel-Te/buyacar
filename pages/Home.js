@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, Image, FlatList } from 'react-native';
 import Card from '../components/Card'
 
 function Home() {
+  
     const itens = [
         {
           id : 1,

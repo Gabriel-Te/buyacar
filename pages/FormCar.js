@@ -8,6 +8,27 @@ function FormCar() {
   const [price, setPrice] = useState()
   const [image, setImage] = useState('')
   
+  const PostCar = async() => {
+    try {
+      const resultpost = await fetch('http://localhost:3333/car/create',{
+        method: 'POST',
+        headers: {
+          "Content-Type" : "application/json" 
+        },
+        body: JSON.stringify({name : name, price: price, image: image})
+      });
+      
+      if (resultpost.ok) {
+        const responseData = await resultpost.json();
+        console.log('Car post successful:', responseData);
+    } else {
+        console.log('Error posting car:', resultpost.status, resultpost.statusText);
+    }
+    } catch (error) {
+      console.log(error.message)
+    }
+
+  }
   
   return (
     <View style={styles.container}>
@@ -29,7 +50,7 @@ function FormCar() {
       keyboardType='numeric'
       />
 
-      <Text>Image(online URL)</Text>
+      <Text>Imagem(online URL)</Text>
       <TextInput
       style={styles.input}
       onChangeText={e => setImage(e)}
@@ -37,7 +58,7 @@ function FormCar() {
       placeholder='Set a Image'
       />
 
-      <Button/>
+      <Button action={PostCar}/>
       </View>
   );
 }

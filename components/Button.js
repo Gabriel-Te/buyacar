@@ -1,10 +1,10 @@
 import {Text, TouchableOpacity, StyleSheet, View } from 'react-native'
 
-function Button() {
+function Button({action}) {
 
     return(
 
-        <TouchableOpacity style={styles.container}>
+        <TouchableOpacity onPress={action} style={styles.container}>
             <Text style={styles.title}>titulo</Text>
         </TouchableOpacity>
 
