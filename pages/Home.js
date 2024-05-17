@@ -1,46 +1,45 @@
 
-import { StyleSheet, Text, View, Image, FlatList } from 'react-native';
+import { StyleSheet, View, FlatList } from 'react-native';
+import { useEffect, useState } from 'react';
 import Card from '../components/Card'
 
 function Home() {
-  
-    const itens = [
-        {
-          id : 1,
-          name: 'Lotus Carlton',
-          price: 140000,
-          image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Porsche_964_front_20080515.jpg/1200px-Porsche_964_front_20080515.jpg'
-        },
-        {
-          id : 2,
-          name: 'Lotuas Carlton',
-          price: 140000,
-          image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxH8JzdrjS_NLhjkZHNZRrbKdgaIZLRzsH-g&usqp=CAU'
-        },
-        {
-          id : 3,
-          name: 'Lotus Carlton',
-          price: 140000,
-          image: 'https://carroscomcamanzi.com.br/wp-content/uploads/2022/02/JAGUAR-XJ-C-3.jpg'
-        },
-        {
-          id : 4,
-          name: 'Lotus Carlton',
-          price: 140000,
-          image: 'https://www.carscoops.com/wp-content/uploads/2020/08/Mercedes-Benz-190E-2.5-16-Evolution-7b.jpg'
-        },
-      ]
+
+  const [listCars, setListCars] = useState([])
+
+  const getCars = async() =>{
+    try{
+    const result = await fetch('http://localhost:3001/car/listAll',{
+    method: 'GET',
+    headers: {
+      "Content-Type" : "application/json" 
+    },
+    });
+    if(result.ok){
+      const data = await result.json()
+      setListCars(data.cars)
+    }
+  }catch(error){
+    console.error('erro ao buscar os carros',error)
+  }
+
+  }
+
+  useEffect(() =>{
+    getCars()
+  }, []
+  );
 
   return (
     <View style={styles.container}>
       <FlatList
       style={styles.flatlist}
-      data={itens}
+      data={listCars}
       numColumns={2}
       renderItem={({item}) => 
         <Card image={item.image} name={item.name} price={item.price}/>
       }
-      keyExtractor={(item) => item.id.toString()}
+      keyExtractor={(item) => item.idcar.toString()}
       /> 
     </View>
   );

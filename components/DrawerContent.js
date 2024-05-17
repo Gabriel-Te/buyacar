@@ -5,10 +5,10 @@ const DrawerContent = ({navigation}) => {
     return(
         <View style={styles.container}>
         <TouchableOpacity style={styles.item} onPress={() => navigation.navigate('Home')}>
-          <Text style={styles.text}>Home</Text>
+          <Text style={styles.text}>Inicio</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.item} onPress={() => navigation.navigate('FormCar')}>
-          <Text style={styles.text}>FormCar</Text>
+          <Text style={styles.text}>Anuncie seu carro</Text>
         </TouchableOpacity>
       </View>
     )

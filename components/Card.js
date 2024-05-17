@@ -5,7 +5,7 @@ import { StyleSheet, Text, View, Image } from 'react-native';
 function Card({image,name,price}) {
   return (
     <View style={styles.container}>
-      <Image style={styles.logo} source={{uri:image}}/>
+      <Image style={styles.logo} source={image}/>
       <Text style={styles.title}>{name}</Text>
       <Text style={styles.price}>{price}</Text>
     </View>
