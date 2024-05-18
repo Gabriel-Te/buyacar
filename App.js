@@ -5,6 +5,7 @@ import { StyleSheet, Text, View, FlatList, SafeAreaView } from 'react-native';
 import Home from './pages/Home'
 import FormCar from './pages/FormCar';
 import DrawerrContent from './components/DrawerContent';
+import CardPressed from './pages/CardPressed';
 
 const Drawer = createDrawerNavigator()
 
@@ -19,6 +20,7 @@ export default function App() {
         <Drawer.Navigator drawerContent={props => <DrawerrContent {...props}/>}>
           <Drawer.Screen name='Home' component={Home} />
           <Drawer.Screen name='FormCar' component={FormCar} />
+          <Drawer.Screen name='CardPressed' component={CardPressed} />
         </Drawer.Navigator>
       </NavigationContainer>
     </SafeAreaView>
