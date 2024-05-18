@@ -1,5 +1,5 @@
 
-import { StyleSheet, View, FlatList } from 'react-native';
+import { StyleSheet, View, FlatList, Text } from 'react-native';
 import { useEffect, useState } from 'react';
 import Card from '../components/Card'
 
@@ -32,15 +32,16 @@ function Home() {
 
   return (
     <View style={styles.container}>
+      { listCars.length ?
       <FlatList
       style={styles.flatlist}
       data={listCars}
       numColumns={2}
       renderItem={({item}) => 
-        <Card image={item.image} name={item.name} price={item.price}/>
+        <Card car={item}/>
       }
       keyExtractor={(item) => item.idcar.toString()}
-      /> 
+      /> : <Text>erro ao buscar os carros </Text>}
     </View>
   );
 }

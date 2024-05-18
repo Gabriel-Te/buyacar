@@ -2,16 +2,16 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image, Pressable } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
-function Card(item) {
+const Card = ({car}) => {
 
   const navigation = useNavigation()
 
   return (
-  <Pressable onPress={() => navigation.navigate('CardPressed', {item})}>
+  <Pressable onPress={() => navigation.navigate('CardPressed', {car})}>
     <View style={styles.container}>
-      <Image style={styles.logo} source={item.image}/>
-      <Text style={styles.title}>{item.name}</Text>
-      <Text style={styles.price}>{item.price}</Text>
+      <Image style={styles.logo} source={car.image}/>
+      <Text style={styles.title}>{car.name}</Text>
+      <Text style={styles.price}>{car.price}</Text>
     </View>
   </Pressable>
   );
