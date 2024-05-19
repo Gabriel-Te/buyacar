@@ -6,6 +6,7 @@ import Home from './pages/Home'
 import FormCar from './pages/FormCar';
 import DrawerrContent from './components/DrawerContent';
 import CardPressed from './pages/CardPressed';
+import EditFormCar from './pages/EditFormCar';
 
 const Drawer = createDrawerNavigator()
 
@@ -21,6 +22,7 @@ export default function App() {
           <Drawer.Screen name='Home' component={Home} />
           <Drawer.Screen name='FormCar' component={FormCar} />
           <Drawer.Screen name='CardPressed' component={CardPressed} />
+          <Drawer.Screen name='EditFormCar' component={EditFormCar} />
         </Drawer.Navigator>
       </NavigationContainer>
     </SafeAreaView>

@@ -1,12 +1,15 @@
 import { StyleSheet, Text, View, Image, TextInput } from 'react-native';
 import {useState} from 'react'
 import Button from '../components/Button';
+import { useNavigation, useRoute } from '@react-navigation/native';
 
 function FormCar() {
-
+  
   const [name, setName] = useState('')
   const [price, setPrice] = useState()
   const [image, setImage] = useState('')
+
+  
   
   const PostCar = async() => {
     try {

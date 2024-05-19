@@ -24,7 +24,6 @@ function CardPressed() {
       }
     }
 
-
   return (
     <View style={styles.container}>
         <Image style={styles.image} source={car.image}/>
@@ -32,6 +31,7 @@ function CardPressed() {
         <Text>{car.name}</Text>
 
         <Button action={remove}></Button>
+        <Button action={() => navigation.navigate('EditFormCar', {car})}></Button>
     </View>
   )}
   
