@@ -16,9 +16,9 @@ export default function App() {
   return (
 
     <SafeAreaView style={styles.maincontainer}>
-    <StatusBar style="auto" />
+      <StatusBar style="auto" />
       <NavigationContainer>
-        <Drawer.Navigator drawerContent={props => <DrawerrContent {...props}/>}>
+        <Drawer.Navigator drawerContent={props => <DrawerrContent {...props} />}>
           <Drawer.Screen name='Home' component={Home} />
           <Drawer.Screen name='FormCar' component={FormCar} />
           <Drawer.Screen name='CardPressed' component={CardPressed} />
