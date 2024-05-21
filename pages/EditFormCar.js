@@ -33,7 +33,7 @@ function EditFormCar() {
       if (resultEdit.ok) {
         const responseData = await resultEdit.json();
         console.log(`veículo ${car.idcar} editado com sucesso`, responseData);
-        navigation.navigate('Home'); // Navigate to Home after successful edit
+        navigation.navigate('Home');
       } else {
         const errorData = await resultEdit.json();
         console.log('Error editing car:', resultEdit.status, resultEdit.statusText, errorData);
@@ -73,7 +73,7 @@ function EditFormCar() {
         placeholder='Set a Image'
       />
 
-      <Button action={edit} />
+      <Button action={edit} placeholder='Salvar'/>
     </View>
   )
 };

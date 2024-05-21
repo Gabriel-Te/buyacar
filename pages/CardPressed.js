@@ -30,8 +30,8 @@ function CardPressed() {
       <Text>{car.price}</Text>
       <Text>{car.name}</Text>
 
-      <Button action={remove}></Button>
-      <Button action={() => navigation.navigate('EditFormCar', { car })}></Button>
+      <Button action={remove} placeholder='Remover'></Button>
+      <Button action={() => navigation.navigate('EditFormCar', { car })} placeholder='Editar'></Button>
     </View>
   )
 }

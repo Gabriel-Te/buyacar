@@ -19,7 +19,7 @@ export default function App() {
       <StatusBar style="auto" />
       <NavigationContainer>
         <Drawer.Navigator drawerContent={props => <DrawerrContent {...props} />}>
-          <Drawer.Screen name='Home' component={Home} />
+          <Drawer.Screen style={styles.home} name='Home' component={Home} />
           <Drawer.Screen name='FormCar' component={FormCar} />
           <Drawer.Screen name='CardPressed' component={CardPressed} />
           <Drawer.Screen name='EditFormCar' component={EditFormCar} />
@@ -34,6 +34,5 @@ const styles = StyleSheet.create({
     flex: 1,
     textAlign: 'center',
     justifyContent: 'center',
-
   },
 });

@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     title: {
       marginTop: 5,
       marginLeft: 4,
-      fontWeight: '800',
+      fontWeight: '600',
       color: '#FFF'
     },
     price: {

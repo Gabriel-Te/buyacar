@@ -1,11 +1,11 @@
 import {Text, TouchableOpacity, StyleSheet, View } from 'react-native'
 
-function Button({action}) {
+function Button({action, placeholder}) {
 
     return(
 
         <TouchableOpacity onPress={action} style={styles.container}>
-            <Text style={styles.title}>titulo</Text>
+            <Text style={styles.title}>{placeholder}</Text>
         </TouchableOpacity>
 
     )
@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
     container: {
         backgroundColor: 'red',
         paddingVertical: 10 ,
-        paddingHorizontal: 20,
+        paddingHorizontal: 30,
         alignContent: 'center',
         justifyContent: 'center',
         width: 100,

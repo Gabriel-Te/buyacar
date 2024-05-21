@@ -61,7 +61,7 @@ function FormCar() {
         placeholder='Set a Image'
       />
 
-      <Button action={PostCar} />
+      <Button action={PostCar} placeholder='Criar'/>
     </View>
   );
 }
