@@ -19,6 +19,7 @@ function Home() {
         const data = await result.json()
         setListCars(data.cars)
       }
+
     } catch (error) {
       console.error('erro ao buscar os carros', error)
     }
@@ -71,3 +72,8 @@ const styles = StyleSheet.create({
 });
 
 export default Home
+
+
+
+
+
