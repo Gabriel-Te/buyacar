@@ -1,7 +1,9 @@
-import { StyleSheet, Text, View, Image, TextInput } from 'react-native';
+import { StyleSheet, Text, View, ImageBackground, TextInput } from 'react-native';
 import { useState } from 'react'
 import Button from '../components/Button';
 import { useNavigation, useRoute } from '@react-navigation/native';
+import fundo from '../assets/fundo.png'
+
 
 function Register() {
 
@@ -35,7 +37,7 @@ function Register() {
 
   return (
     <View style={styles.container}>
-
+      <ImageBackground source={fundo} resizeMode="cover">
       <Text style={styles.text}>Nome de usuário</Text>
       <TextInput
         style={styles.input}
@@ -53,6 +55,7 @@ function Register() {
       />
 
       <Button action={register} placeholder='Registrar'/>
+      </ImageBackground>
     </View>
   );
 }
@@ -71,7 +74,8 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 30,
-    marginLeft: 10
+    marginLeft: 10,
+    color: '#fff'
   }
 
 
