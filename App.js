@@ -22,8 +22,8 @@ export default function App() {
       <StatusBar style="auto" />
       <NavigationContainer>
         <Drawer.Navigator drawerContent={props => <DrawerrContent {...props} />}>
-          <Drawer.Screen name='Register' component={Register} />
-          <Drawer.Screen name='Login' component={Login} />
+        {/*<Drawer.Screen name='Register' component={Register} />*/}
+        {/* <Drawer.Screen name='Login' component={Login} /> */}
           <Drawer.Screen style={styles.home} name='Home' component={Home} />
           <Drawer.Screen name='FormCar' component={FormCar} />
           <Drawer.Screen name='CardPressed' component={CardPressed} />

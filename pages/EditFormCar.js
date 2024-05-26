@@ -47,8 +47,6 @@ function EditFormCar() {
 
   return (
     <View style={styles.container}>
-
-      <Text>{car.idcar}</Text>
       <TextInput
         style={styles.input}
         onChangeText={e => setName(e)}
@@ -56,7 +54,7 @@ function EditFormCar() {
         placeholder='Vehicle Name'
       />
 
-      <Text>Price</Text>
+      <Text style={styles.text}>Price</Text>
       <TextInput
         style={styles.input}
         onChangeText={e => setPrice(e)}
@@ -65,7 +63,7 @@ function EditFormCar() {
         keyboardType='numeric'
       />
 
-      <Text>Imagem(online URL)</Text>
+      <Text style={styles.text}>Imagem(online URL)</Text>
       <TextInput
         style={styles.input}
         onChangeText={e => setImage(e)}
@@ -81,15 +79,22 @@ function EditFormCar() {
 const styles = StyleSheet.create({
   container: {
     display: 'flex',
-    backgroundColor: '#616161',
+    backgroundColor: '#3E6A87',
     flex: 1,
 
   },
   input: {
-    backgroundColor: '#fff',
+    backgroundColor: '#CBF6FF',
     width: '50%',
+    height: 40,
+    margin: 10
+  },
+  text: {
+    color: '#CBF6FF',
+    fontSize: 30,
+    marginLeft: 10
   }
 
-});
 
+});
 export default EditFormCar

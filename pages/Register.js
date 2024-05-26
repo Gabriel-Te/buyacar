@@ -36,7 +36,7 @@ function Register() {
   return (
     <View style={styles.container}>
 
-      <Text>Nome de usuário</Text>
+      <Text style={styles.text}>Nome de usuário</Text>
       <TextInput
         style={styles.input}
         onChangeText={e => setUsername(e)}
@@ -44,7 +44,7 @@ function Register() {
         placeholder='Usuário:'
       />
 
-      <Text>senha</Text>
+      <Text style={styles.text}>senha</Text>
       <TextInput
         style={styles.input}
         onChangeText={e => setPassword(e)}
@@ -66,7 +66,14 @@ const styles = StyleSheet.create({
   input: {
     backgroundColor: '#fff',
     width: '50%',
+    height: 40,
+    margin: 10
+  },
+  text: {
+    fontSize: 30,
+    marginLeft: 10
   }
+
 
 });
 

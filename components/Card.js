@@ -11,7 +11,7 @@ const Card = ({car}) => {
     <View style={styles.container}>
       <Image style={styles.logo} source={car.image}/>
       <Text style={styles.title}>{car.name}</Text>
-      <Text style={styles.price}>{car.price}</Text>
+      <Text style={styles.price}>R${car.price}</Text>
     </View>
   </Pressable>
   );

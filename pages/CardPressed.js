@@ -27,8 +27,8 @@ function CardPressed() {
   return (
     <View style={styles.container}>
       <Image style={styles.image} source={car.image} />
-      <Text>{car.price}</Text>
-      <Text>{car.name}</Text>
+      <Text style={styles.text}>{car.name}</Text>
+      <Text style={styles.text}>{car.price}</Text>
 
       <Button action={remove} placeholder='Remover'></Button>
       <Button action={() => navigation.navigate('EditFormCar', { car })} placeholder='Editar'></Button>
@@ -39,13 +39,18 @@ function CardPressed() {
 const styles = StyleSheet.create({
   container: {
     display: 'flex',
-    backgroundColor: '#616161',
+    backgroundColor: '#3E6A87',
     flex: 1
   },
   image: {
-    width: 200,
-    height: 100,
-    objectFit: 'cover'
+    width: 412,
+    height: 300,
+    objectFit: 'contain',
+  },
+  text: {
+    color: '#CBF6FF',
+    fontSize: 30,
+    marginLeft: 10
   }
 
 });

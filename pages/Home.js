@@ -48,7 +48,7 @@ function Home() {
 }
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'lightgrey',
+    backgroundColor: 'white',
     flex: 1,
     flexDirection: 'row',
     height: 100,

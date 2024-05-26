@@ -13,17 +13,18 @@ function Button({action, placeholder}) {
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: 'red',
+        backgroundColor: '#fff',
         paddingVertical: 10 ,
         paddingHorizontal: 30,
         alignContent: 'center',
         justifyContent: 'center',
-        width: 100,
+        width: 150,
         height: 50,
-        borderRadius: 5
+        borderRadius: 5,
+        margin: 10
     },
     title: {
-        color: '#fff',
+        color: '#3E6A87',
         fontSize: 20,
         fontWeight: 'bold',
         textAlign: 'center'
