@@ -2,9 +2,12 @@
 import { StyleSheet, View, FlatList, Text } from 'react-native';
 import { useEffect, useState } from 'react';
 import Card from '../components/Card'
+import { useIsFocused } from '@react-navigation/native';
+
 
 function Home() {
 
+  const isFocused = useIsFocused()
   const [listCars, setListCars] = useState([])
 
   const getCars = async () => {
@@ -27,8 +30,10 @@ function Home() {
   }
 
   useEffect(() => {
+    if(isFocused){
     getCars()
-  }, []
+  }
+  }, [isFocused]
   );
 
   return (

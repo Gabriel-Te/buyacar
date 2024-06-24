@@ -8,8 +8,8 @@ function FormCar() {
   const [name, setName] = useState('')
   const [price, setPrice] = useState()
   const [image, setImage] = useState('')
-
-
+  const [successMessage, setSuccessMessage] = useState('')
+  const [errorMessage, setErrorMessage] = useState('')
 
   const PostCar = async () => {
     try {
@@ -23,18 +23,28 @@ function FormCar() {
 
       if (resultpost.ok) {
         const responseData = await resultpost.json();
-        console.log('Car post successful:', responseData);
+        setSuccessMessage('Car post successful:', responseData)
+        setErrorMessage('');
       } else {
-        console.log('Error posting car:', resultpost.status, resultpost.statusText);
+        setErrorMessage(
+          'Error posting car:', 
+          resultpost.status,
+          resultpost.statusText
+        );
+        setSuccessMessage('')
       }
     } catch (error) {
-      console.log(error.message)
+      setErrorMessage('Network Error 500')
+      setSuccessMessage('')
     }
 
   }
 
   return (
     <View style={styles.container}>
+
+      {successMessage ? <Text style={styles.successMessage}>{successMessage}</Text> : null}
+      {errorMessage ? <Text style={styles.errorMessage}>{errorMessage}</Text> : null}
 
       <Text style={styles.text}>Vehicle Name</Text>
       <TextInput
@@ -83,8 +93,17 @@ const styles = StyleSheet.create({
     color: '#CBF6FF',
     fontSize: 30,
     marginLeft: 10
-  }
-
+  },
+  successMessage: {
+    color: 'green',
+    fontSize: 18,
+    marginTop: 10,
+  },
+  errorMessage: {
+    color: 'red',
+    fontSize: 18,
+    marginTop: 10,
+  },
 
 });
 
